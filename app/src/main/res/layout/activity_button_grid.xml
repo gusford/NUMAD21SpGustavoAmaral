@@ -33,21 +33,24 @@
                     android:id="@+id/buttonA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="A" />
 
                 <Button
                     android:id="@+id/buttonB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="B" />
 
                 <Button
                     android:id="@+id/buttonC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="C" />
 
             </TableRow>
@@ -60,21 +63,24 @@
                     android:id="@+id/buttonD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="D" />
 
                 <Button
                     android:id="@+id/buttonE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="E" />
 
                 <Button
                     android:id="@+id/buttonF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6"
+                    android:layout_margin="6dp"
+                    android:onClick="onClick"
                     android:text="F" />
 
             </TableRow>
@@ -82,7 +88,7 @@
         </TableLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/buttonPressedTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Pressed: _"
