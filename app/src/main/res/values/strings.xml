@@ -4,11 +4,17 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Hello World Page</string>
     <string name="second_fragment_label">About Page</string>
-    <string name="about_button_label">About</string>
-    <string name="previous">Return to Hello World Page</string>
 
+    <string name="about_button_label">About</string>
+    <string name="button_2_label">Button Grid</string>
+
+    <string name="previous">Return to Hello World Page</string>
     <string name="hello_first_fragment">Hello World!</string>
     <string name="hello_second_fragment">Gustavo Amaral \namaral.g@northeastern.edu</string>
-    <string name="button_2_label">Button 2</string>
-    <string name="button_3_label">Button 3</string>
+    <string name="title_activity_button_grid">ButtonGridActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

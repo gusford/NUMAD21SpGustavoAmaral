@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_ga_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD21SpGustavoAmaral">
+        <activity android:name=".ButtonGridActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
