@@ -1,26 +1,22 @@
 package com.example.numad21sp_gustavoamaral;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class RviewAdapter extends RecyclerView.Adapter<RviewHolder> {
+    private final ArrayList<URLCard> urlList;
+    private CardClickable listener;
 
-    private final ArrayList<ItemCard> itemList;
-    private ItemClickListener listener;
-
-    //Constructor
-    public RviewAdapter(ArrayList<ItemCard> itemList) {
-        this.itemList = itemList;
+    public RviewAdapter(ArrayList<URLCard> urlList) {
+        this.urlList = urlList;
     }
 
-    public void setOnItemClickListener(ItemClickListener listener) {
+    public void setOnItemClickListener(CardClickable listener) {
         this.listener = listener;
     }
 
@@ -32,13 +28,13 @@ public class RviewAdapter extends RecyclerView.Adapter<RviewHolder> {
 
     @Override
     public void onBindViewHolder(RviewHolder holder, int position) {
-        ItemCard currentItem = itemList.get(position);
+        URLCard currentItem = urlList.get(position);
 
-        holder.itemName.setText(currentItem.getItemName());
+        holder.urlName.setText(currentItem.getUrl());
     }
 
     @Override
     public int getItemCount() {
-        return itemList.size();
+        return urlList.size();
     }
 }
