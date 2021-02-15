@@ -23,9 +23,7 @@ public class RviewHolder extends RecyclerView.ViewHolder {
             if (position == RecyclerView.NO_POSITION)
                 return;
 
-            // listener.onClick(position);
-
-            // TODO: activate URL
+            listener.onClick(itemView.getContext(), position);
         });
     }
 }
