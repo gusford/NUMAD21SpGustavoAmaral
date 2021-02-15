@@ -32,5 +32,10 @@ public class HomeFragment extends Fragment {
             Intent intent = new Intent(view1.getContext(), ButtonGridActivity.class);
             startActivity(intent);
         });
+
+        view.findViewById(R.id.linkCollectorButton).setOnClickListener(view1 -> {
+            Intent intent = new Intent(view1.getContext(), LinkCollectorActivity.class);
+            startActivity(intent);
+        });
     }
 }

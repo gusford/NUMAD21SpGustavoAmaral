@@ -17,4 +17,10 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_link_collector">LinkCollectorActivity</string>
+    <string name="link_collector">Link Collector</string>
+
+    <string name="item_name">Item name</string>
+    <string name="item_description">Description</string>
+    <string name="description">This image acts as an icon.</string>
 </resources>
