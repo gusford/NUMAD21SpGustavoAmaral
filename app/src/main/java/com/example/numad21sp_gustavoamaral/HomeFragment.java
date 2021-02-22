@@ -37,5 +37,10 @@ public class HomeFragment extends Fragment {
             Intent intent = new Intent(view1.getContext(), LinkCollectorActivity.class);
             startActivity(intent);
         });
+
+        view.findViewById(R.id.buttonLocator).setOnClickListener(view1 -> {
+            Intent intent = new Intent(view1.getContext(), LocatorActivity.class);
+            startActivity(intent);
+        });
     }
 }

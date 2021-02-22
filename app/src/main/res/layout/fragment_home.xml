@@ -26,6 +26,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
+            android:id="@+id/buttonLocator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/locator"
+            app:layout_constraintBottom_toTopOf="@+id/linkCollectorButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
             android:id="@+id/linkCollectorButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +43,7 @@
             app:layout_constraintBottom_toTopOf="@+id/gridButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLocator" />
 
         <Button
             android:id="@+id/gridButton"

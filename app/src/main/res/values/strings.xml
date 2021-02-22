@@ -26,4 +26,6 @@
     <string name="add_new_url">Add new URL</string>
     <string name="new_url">Add URL</string>
     <string name="visit_url">Visit URL</string>
+    <string name="title_activity_locator">LocatorActivity</string>
+    <string name="locator">Locator</string>
 </resources>
