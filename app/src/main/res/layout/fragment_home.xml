@@ -26,14 +26,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
+            android:id="@+id/webserviceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/webservice"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLocator"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLocator"
+            app:layout_constraintStart_toStartOf="@+id/buttonLocator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
             android:id="@+id/buttonLocator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/locator"
             app:layout_constraintBottom_toTopOf="@+id/linkCollectorButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/linkCollectorButton"
+            app:layout_constraintStart_toStartOf="@+id/linkCollectorButton"
+            app:layout_constraintTop_toBottomOf="@+id/webserviceButton" />
 
         <Button
             android:id="@+id/linkCollectorButton"
@@ -41,8 +52,8 @@
             android:layout_height="wrap_content"
             android:text="@string/link_collector"
             app:layout_constraintBottom_toTopOf="@+id/gridButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/gridButton"
+            app:layout_constraintStart_toStartOf="@+id/gridButton"
             app:layout_constraintTop_toBottomOf="@+id/buttonLocator" />
 
         <Button
@@ -51,8 +62,8 @@
             android:layout_height="wrap_content"
             android:text="@string/button_2_label"
             app:layout_constraintBottom_toTopOf="@+id/aboutButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/aboutButton"
+            app:layout_constraintStart_toStartOf="@+id/aboutButton"
             app:layout_constraintTop_toBottomOf="@+id/linkCollectorButton" />
 
         <Button

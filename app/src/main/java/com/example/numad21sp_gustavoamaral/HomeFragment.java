@@ -42,5 +42,10 @@ public class HomeFragment extends Fragment {
             Intent intent = new Intent(view1.getContext(), LocatorActivity.class);
             startActivity(intent);
         });
+
+        view.findViewById(R.id.webserviceButton).setOnClickListener(view1 -> {
+            Intent intent = new Intent(view1.getContext(), DefinitionActivity.class);
+            startActivity(intent);
+        });
     }
 }

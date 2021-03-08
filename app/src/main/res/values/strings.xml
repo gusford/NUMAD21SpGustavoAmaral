@@ -28,4 +28,7 @@
     <string name="visit_url">Visit URL</string>
     <string name="title_activity_locator">LocatorActivity</string>
     <string name="locator">Locator</string>
+    <string name="search_for_synonyms">Search for word definition...</string>
+    <string name="search">Search</string>
+    <string name="webservice">WebService</string>
 </resources>
