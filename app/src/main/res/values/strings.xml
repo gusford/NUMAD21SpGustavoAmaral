@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">NUMAD21Sp-GustavoAmaral</string>
-    <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Hello World Page</string>
     <string name="second_fragment_label">About Page</string>
@@ -11,24 +10,23 @@
     <string name="previous">Return to Hello World Page</string>
     <string name="hello_first_fragment">Hello World!</string>
     <string name="hello_second_fragment">Gustavo Amaral \namaral.g@northeastern.edu</string>
-    <string name="title_activity_button_grid">ButtonGridActivity</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
-    <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_link_collector">LinkCollectorActivity</string>
     <string name="link_collector">Link Collector</string>
 
     <string name="item_name">Item name</string>
-    <string name="item_description">Description</string>
-    <string name="description">This image acts as an icon.</string>
     <string name="add_new_url">Add new URL</string>
     <string name="new_url">Add URL</string>
     <string name="visit_url">Visit URL</string>
     <string name="title_activity_locator">LocatorActivity</string>
     <string name="locator">Locator</string>
-    <string name="search_for_synonyms">Search for word definition...</string>
+    <string name="search_for_synonyms">Search for word definition…</string>
     <string name="search">Search</string>
     <string name="webservice">WebService</string>
+    <string name="try_searching_for_a_word">Try searching for a word…</string>
+    <string name="SearchingText">Searching…</string>
+    <string name="responsiveness_test">Responsiveness Test:</string>
 </resources>

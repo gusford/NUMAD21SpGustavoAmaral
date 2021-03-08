@@ -7,23 +7,15 @@ import android.os.Handler;
 import android.text.Editable;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-
-import static java.util.Collections.replaceAll;
 
 public class DefinitionActivity extends AppCompatActivity {
     private TextInputLayout queryInput;
@@ -43,14 +35,22 @@ public class DefinitionActivity extends AppCompatActivity {
         definitionText = findViewById(R.id.definitionText);
 
         // Hook search button
-        searchButton.setOnClickListener(v -> new Thread(new runnableAPIRequest()).start());
+        searchButton.setOnClickListener(v -> Search());
+    }
+
+    private void Search() {
+        definitionText.setText(R.string.SearchingText);
+        new Thread(new runnableAPIRequest()).start();
     }
 
     class runnableAPIRequest implements Runnable {
         @Override
         public void run() {
             try {
-                // Grab query from UI
+                // Make sure user reads the 'Searching...' text
+                Thread.sleep(1000);
+
+                // Grab query from UI3
                 Editable queryText = queryInput.getEditText().getText();
 
                 // Prepare API call
@@ -72,15 +72,13 @@ public class DefinitionActivity extends AppCompatActivity {
                 br.close();
                 JSONArray jsonArray = new JSONArray(sb.toString());
 
-                // Skip if JSON is empty
+                // Handle invalid word query
                 if (jsonArray.get(0) instanceof String) {
-                    apiRequestHandler.post(() -> {
-                        definitionText.setText("Word search failed! Similar words found:\n\n" + jsonArray.toString());
-                    });
+                    apiRequestHandler.post(() -> definitionText.setText(String.format("Word search failed! Similar words found:\n\n%s", jsonArray.toString())));
                     return;
                 }
 
-                // Parse JSON
+                // Parse valid JSON
                 final String response = jsonArray
                         .getJSONObject(0)
                         .getJSONArray("def")
@@ -95,11 +93,11 @@ public class DefinitionActivity extends AppCompatActivity {
                         .replaceAll("\\{.*?\\}", "");
 
                 // relay data back to UI
-                apiRequestHandler.post(() -> {
-                    definitionText.setText(response);
-                });
+                apiRequestHandler.post(() -> definitionText.setText(response));
 
             } catch (Exception e) {
+                apiRequestHandler.post(() -> definitionText.setText("Please try a different word.\n"));
+
                 e.printStackTrace();
             }
         }
